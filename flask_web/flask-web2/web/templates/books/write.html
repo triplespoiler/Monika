@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}著者{% endblock %}
+
+{% block content %}	
+<h1>蔵書一覧のCVS形式</h1>
+<div class='tonew'>
+    <a href="{{url_for('static', filename='csv/books.csv')}}" download>ダウンロード</a> 
+    <a href="{{url_for('books.all')}}">一覧に戻る</a>
+</div>    
+
+   <textarea rows="10" cols="50">{{str}}</textarea>
+{% endblock %}
